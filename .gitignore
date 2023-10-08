@@ -1,1 +1,2 @@
-*.code-workspace
+/user/sim/build
+/user/data/*
