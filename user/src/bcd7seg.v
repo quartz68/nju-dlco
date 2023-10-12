@@ -1,4 +1,4 @@
-module bcd7seg_alt (
+module bcd7seg (
   input  [2:0] b,
   input en,
   output reg [6:0] h
@@ -6,14 +6,20 @@ module bcd7seg_alt (
 
     always @(b or en) begin
         if (en) begin
-            
+            assign h[0] = ~b[1] & (b[0] ^ b[2]);
+            assign h[1] = b[2] & (b[0] ^ b[1]);
+            assign h[2] = ~b[0] & b[1] & ~b[2];
+            assign h[3] = ~b[1] & (b[0] ^ b[2]) | b[0] & b[1] & b[2];
+            assign h[4] = b[0] | ~b[1] & b[2];
+            assign h[5] = b[0] & ~b[2] | b[1] & ~b[2] | b[0] & b[1];
+            assign h[6] = ~b[1] & ~b[2] | b[0] & b[1] & b[2];
         end
         else h = 7'b1111111;
     end
 
 endmodule
 
-module bcd7seg (
+module bcd7seg_alt (
   input  [2:0] b,
   input en,
   output reg [6:0] h
