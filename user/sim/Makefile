@@ -1,4 +1,4 @@
-TOPNAME = encode_display
+TOPNAME = signed_alu4
 NXDC_FILES = constr/$(TOPNAME).nxdc
 
 VERILATOR = verilator
