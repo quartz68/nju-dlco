@@ -1,4 +1,4 @@
-TOPNAME = signed_alu4
+TOPNAME = lfsr8
 NXDC_FILES = constr/$(TOPNAME).nxdc
 
 VERILATOR = verilator
