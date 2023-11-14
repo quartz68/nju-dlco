@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module lfsr8 (
     input clk,
     input reset,

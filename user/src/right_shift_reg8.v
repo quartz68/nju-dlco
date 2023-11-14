@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module right_shift_reg8 (
     input clk,
     input clear,

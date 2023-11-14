@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module signed_alu4 (
     input [3:0] A,
     input [3:0] B,
@@ -12,7 +13,7 @@ module signed_alu4 (
     assign N = Result[3];
     assign Z = ~(| Result);
 
-    always_latch @(*) begin
+    always @(*) begin
         case (ALUControl)
             3'b000: begin
                 {C, Result} = A + B;

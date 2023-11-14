@@ -1,11 +1,11 @@
-TOPNAME = lfsr8
+TOPNAME = keyboard_sim
 NXDC_FILES = constr/$(TOPNAME).nxdc
 
 VERILATOR = verilator
 # VERILATOR_CFLAGS += --build --cc -Wall -O3 --trace
 # VERILATOR_CFLAGS += --build --cc -O3 --trace
 VERILATOR_CFLAGS += -MMD --build -cc  \
-				-O3 --x-assign fast --x-initial fast --noassert --trace
+				-O3 --x-assign fast --x-initial fast --noassert --trace --timing
 
 BUILD_DIR = ./build
 OBJ_DIR = $(BUILD_DIR)/obj_dir

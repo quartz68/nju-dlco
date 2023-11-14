@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module mux42(
     input [7:0] x,
     input [1:0] y,

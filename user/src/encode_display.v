@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module encode_display (
     input [7:0] x,
     input en,

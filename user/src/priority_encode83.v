@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module priority_encode83 (
     input [7:0] x,
     input en,

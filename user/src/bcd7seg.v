@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module bcd7seg (
   input  [2:0] b,
   input en,
