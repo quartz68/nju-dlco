@@ -1,4 +1,4 @@
-TOPNAME = keyboard_sim
+TOPNAME = PS2_display
 NXDC_FILES = constr/$(TOPNAME).nxdc
 
 VERILATOR = verilator

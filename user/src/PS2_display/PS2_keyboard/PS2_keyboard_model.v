@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module ps2_keyboard_model(
+module PS2_keyboard_model(
     output reg ps2_clk,
     output reg ps2_data
     );

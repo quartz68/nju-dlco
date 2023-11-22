@@ -1,5 +1,5 @@
-`timescale 1ns / 1ps
-module ps2_keyboard_controller(
+`timescale 1ps / 1ps
+module PS2_keyboard_controller(
     input clk,clrn,ps2_clk,ps2_data,
     input nextdata_n,
     output [7:0] data,
@@ -32,6 +32,7 @@ module ps2_keyboard_controller(
                     if(w_ptr==(r_ptr+1'b1)) //empty
                         ready <= 1'b0;
                 end
+                fifo[r_ptr-1] <= 0;
             end
             if (sampling) begin
               if (count == 4'd10) begin
